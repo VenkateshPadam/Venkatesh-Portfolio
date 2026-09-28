@@ -22,7 +22,6 @@
             --accent-cyan: #38bdf8;
             --accent-blue: #6366f1;
             --accent-emerald: #10b981;
-            --accent-purple: #a855f7;
             --glow-color: rgba(56, 189, 248, 0.15);
             --font-sans: 'Plus Jakarta Sans', sans-serif;
             --font-mono: 'Fira Code', monospace;
@@ -44,7 +43,7 @@
             position: relative;
         }
 
-        /* Canvas Background */
+        /* Background Particle Canvas */
         #particle-canvas {
             position: fixed;
             top: 0;
@@ -55,19 +54,19 @@
             pointer-events: none;
         }
 
-        /* Navigation */
+        /* Header Navigation */
         header {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(10, 12, 16, 0.8);
+            background: rgba(10, 12, 16, 0.85);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--card-border);
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 1.2rem 2rem;
             display: flex;
@@ -78,7 +77,6 @@
         .logo {
             font-weight: 800;
             font-size: 1.25rem;
-            letter-spacing: -0.5px;
             color: var(--text-primary);
             text-decoration: none;
             display: flex;
@@ -109,26 +107,22 @@
             color: var(--accent-cyan);
         }
 
-        /* Layout Containers */
+        /* Layout Container */
         section {
             padding: 6rem 2rem;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-        /* Hero Section */
+        /* Centered Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: 85vh;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            padding-top: 8rem;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 3rem;
-            align-items: center;
+            text-align: center;
+            padding-top: 7rem;
         }
 
         .badge {
@@ -138,7 +132,7 @@
             background: rgba(56, 189, 248, 0.1);
             border: 1px solid rgba(56, 189, 248, 0.3);
             color: var(--accent-cyan);
-            padding: 0.4rem 1rem;
+            padding: 0.4rem 1.2rem;
             border-radius: 50px;
             font-size: 0.85rem;
             font-family: var(--font-mono);
@@ -154,11 +148,12 @@
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             font-weight: 800;
-            line-height: 1.1;
+            line-height: 1.15;
             margin-bottom: 1.5rem;
             letter-spacing: -1px;
+            max-width: 850px;
         }
 
         .hero h1 .highlight {
@@ -168,26 +163,27 @@
         }
 
         .hero p {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             color: var(--text-secondary);
-            margin-bottom: 2rem;
-            max-width: 580px;
+            margin-bottom: 2.5rem;
+            max-width: 650px;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.2rem;
+            justify-content: center;
         }
 
         .btn {
-            padding: 0.8rem 1.8rem;
+            padding: 0.85rem 2rem;
             border-radius: 8px;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.6rem;
             font-size: 0.95rem;
         }
 
@@ -213,45 +209,9 @@
             color: var(--accent-cyan);
         }
 
-        /* Code Terminal Card */
-        .terminal-card {
-            background: #0f131a;
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-        }
-
-        .terminal-header {
-            background: rgba(255,255,255,0.03);
-            padding: 0.75rem 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            border-bottom: 1px solid var(--card-border);
-        }
-
-        .dot { width: 12px; height: 12px; border-radius: 50%; }
-        .dot-red { background: #ef4444; }
-        .dot-yellow { background: #f59e0b; }
-        .dot-green { background: #10b981; }
-
-        .terminal-body {
-            padding: 1.5rem;
-            color: #e2e8f0;
-            line-height: 1.8;
-        }
-
-        .code-keyword { color: var(--accent-purple); }
-        .code-var { color: var(--accent-cyan); }
-        .code-string { color: var(--accent-emerald); }
-        .code-comment { color: #64748b; }
-
-        /* Section Headings */
+        /* Headings */
         .section-title {
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
         }
 
         .section-title h2 {
@@ -263,13 +223,59 @@
         .section-title p {
             color: var(--text-secondary);
             font-size: 1rem;
-            margin-top: 0.5rem;
+            margin-top: 0.4rem;
+        }
+
+        /* Education Card */
+        .education-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .education-card:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            box-shadow: 0 10px 25px var(--glow-color);
+        }
+
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .edu-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .edu-duration {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            color: var(--accent-cyan);
+            background: rgba(56, 189, 248, 0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .edu-sub {
+            color: var(--text-secondary);
+            font-size: 1rem;
         }
 
         /* Projects Grid */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
@@ -279,7 +285,6 @@
             border-radius: 16px;
             padding: 2rem;
             transition: all 0.3s ease;
-            position: relative;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -304,7 +309,7 @@
         }
 
         .project-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             margin-bottom: 0.75rem;
         }
 
@@ -399,7 +404,7 @@
             background: linear-gradient(135deg, rgba(18, 22, 31, 0.9), rgba(15, 19, 26, 0.9));
             border: 1px solid var(--card-border);
             border-radius: 20px;
-            padding: 3rem;
+            padding: 3.5rem 2rem;
             text-align: center;
             max-width: 800px;
             margin: 0 auto;
@@ -422,8 +427,8 @@
         }
 
         .social-btn {
-            width: 48px;
-            height: 48px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--card-border);
@@ -431,7 +436,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -450,23 +455,24 @@
             border-top: 1px solid var(--card-border);
         }
 
-        @media (max-width: 868px) {
-            .hero-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.5rem; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.6rem; }
             .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Dynamic Canvas Particle Mesh Background -->
     <canvas id="particle-canvas"></canvas>
 
-    <!-- Header -->
+    <!-- Header / Navbar -->
     <header>
         <nav>
             <a href="#" class="logo"><span>&lt;VP/&gt;</span> Venkatesh Padam</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -476,37 +482,34 @@
 
     <!-- Hero Section -->
     <section class="hero" id="about">
-        <div class="hero-grid">
-            <div class="hero-content">
-                <div class="badge">
-                    <span class="badge-dot"></span> Available for Opportunities
-                </div>
-                <h1>Building intelligent <span class="highlight">web & backend</span> solutions.</h1>
-                <p>Computer Science student specialized in full-stack web application engineering, Python backend development, and responsive interfaces.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary"><i class="fas fa-code"></i> View Projects</a>
-                    <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Contact Me</a>
-                </div>
-            </div>
+        <div class="badge">
+            <span class="badge-dot"></span> Open for Engineering Opportunities
+        </div>
+        <h1>Computer Science Student & <span class="highlight">Software Engineer</span></h1>
+        <p>Passionate about building scalable web applications, robust backends, and responsive user interfaces.</p>
+        <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary"><i class="fas fa-code"></i> View Work</a>
+            <a href="https://github.com/VenkateshPadam" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub Profile</a>
+        </div>
+    </section>
 
-            <!-- Terminal Window -->
-            <div class="terminal-card">
-                <div class="terminal-header">
-                    <div class="dot dot-red"></div>
-                    <div class="dot dot-yellow"></div>
-                    <div class="dot dot-green"></div>
-                    <span style="color: #64748b; margin-left: auto;">developer.js</span>
+    <!-- Education Section -->
+    <section id="education">
+        <div class="section-title">
+            <h2>Education</h2>
+            <p>Academic qualifications and journey</p>
+        </div>
+        <div class="education-card">
+            <div class="edu-header">
+                <div>
+                    <div class="edu-title">Bachelor of Technology (B.Tech)</div>
+                    <div class="edu-sub">Computer Science & Engineering</div>
                 </div>
-                <div class="terminal-body">
-                    <span class="code-keyword">const</span> <span class="code-var">developer</span> = {<br>
-                    &nbsp;&nbsp;name: <span class="code-string">'Venkatesh Padam'</span>,<br>
-                    &nbsp;&nbsp;role: <span class="code-string">'Software Engineer'</span>,<br>
-                    &nbsp;&nbsp;coreSkills: [<span class="code-string">'Python'</span>, <span class="code-string">'Flask'</span>, <span class="code-string">'JavaScript'</span>, <span class="code-string">'HTML/CSS'</span>],<br>
-                    &nbsp;&nbsp;projects: [<span class="code-string">'Flask Portfolio App'</span>],<br>
-                    &nbsp;&nbsp;status: <span class="code-string">'Building scalable systems'</span><br>
-                    };
-                </div>
+                <span class="edu-duration"><i class="far fa-calendar-alt"></i> 2023 – 2027</span>
             </div>
+            <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.95rem;">
+                Studying core computer science fundamentals, data structures, algorithms, database management systems, and full-stack web development.
+            </p>
         </div>
     </section>
 
@@ -514,25 +517,25 @@
     <section id="projects">
         <div class="section-title">
             <h2>Featured Projects</h2>
-            <p>Highlights of software engineering and web application projects</p>
+            <p>Software and full-stack web applications</p>
         </div>
 
         <div class="projects-grid">
-            <!-- Project: Flask Portfolio -->
+            <!-- Project: Python Flask Portfolio -->
             <div class="project-card">
                 <div>
                     <span class="project-tag">Full-Stack Web App</span>
                     <h3>Python Flask Portfolio</h3>
-                    <p>A modular web portfolio platform engineered using Python Flask backend routing, Jinja template inheritance, custom CSS styling, and dynamic project pages.</p>
+                    <p>A web portfolio application engineered using Python Flask backend routing, Jinja2 template engine, custom CSS styling, and dynamic project pages.</p>
                     <div class="tech-stack">
                         <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Flask Framework</span>
+                        <span class="tech-badge">Flask</span>
                         <span class="tech-badge">Jinja2</span>
-                        <span class="tech-badge">HTML/CSS</span>
+                        <span class="tech-badge">HTML5/CSS3</span>
                     </div>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/VenkateshPadam/portfolio" target="_blank"><i class="fab fa-github"></i> Repository</a>
+                    <a href="https://github.com/VenkateshPadam/portfolio" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
                 </div>
             </div>
         </div>
@@ -542,7 +545,7 @@
     <section id="skills">
         <div class="section-title">
             <h2>Technical Skills</h2>
-            <p>Languages, frameworks, and tools I work with</p>
+            <p>Languages, frameworks, and tools</p>
         </div>
 
         <div class="skills-grid">
@@ -562,7 +565,7 @@
                     <li class="skill-item"><i class="fas fa-chevron-right"></i> Flask Framework</li>
                     <li class="skill-item"><i class="fas fa-chevron-right"></i> REST APIs</li>
                     <li class="skill-item"><i class="fas fa-chevron-right"></i> Jinja2 Templating</li>
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> Responsive Web UI</li>
+                    <li class="skill-item"><i class="fas fa-chevron-right"></i> Responsive Design</li>
                 </ul>
             </div>
 
@@ -572,7 +575,7 @@
                     <li class="skill-item"><i class="fas fa-chevron-right"></i> Git & GitHub</li>
                     <li class="skill-item"><i class="fas fa-chevron-right"></i> GitHub Pages</li>
                     <li class="skill-item"><i class="fas fa-chevron-right"></i> VS Code</li>
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> Linux / Terminal</li>
+                    <li class="skill-item"><i class="fas fa-chevron-right"></i> Command Line</li>
                 </ul>
             </div>
         </div>
@@ -581,12 +584,18 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="contact-card">
-            <h3>Let's Connect</h3>
-            <p>I am open to software development opportunities, collaborations, and projects.</p>
+            <h3>Get In Touch</h3>
+            <p>I am open to software development roles, internship opportunities, and technical projects.</p>
             <div class="social-links">
-                <a href="https://github.com/VenkateshPadam" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:padamvenkatesh@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/VenkateshPadam" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:padamvenkatesh@gmail.com" class="social-btn" title="Send Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn Profile">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -596,7 +605,7 @@
         <p>&copy; 2026 Venkatesh Padam. Built with HTML5, CSS3 & JavaScript.</p>
     </footer>
 
-    <!-- Interactive Particle Mesh Canvas Script -->
+    <!-- Canvas Particle Mesh Animation Script -->
     <script>
         const canvas = document.getElementById('particle-canvas');
         const ctx = canvas.getContext('2d');
