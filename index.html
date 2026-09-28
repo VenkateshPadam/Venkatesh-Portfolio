@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venkatesh Padam | Software & Web Developer</title>
+    <title>Portfolio</title>
     
     <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,8 +114,8 @@
             margin: 0 auto;
         }
 
-        /* Centered Hero Section */
-        .hero {
+        /* Blank Section Wrapper */
+        .main-container {
             min-height: 85vh;
             display: flex;
             flex-direction: column;
@@ -125,328 +125,21 @@
             padding-top: 7rem;
         }
 
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(56, 189, 248, 0.1);
-            border: 1px solid rgba(56, 189, 248, 0.3);
-            color: var(--accent-cyan);
-            padding: 0.4rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-family: var(--font-mono);
-            margin-bottom: 1.5rem;
-        }
-
-        .badge-dot {
-            width: 8px;
-            height: 8px;
-            background-color: var(--accent-emerald);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--accent-emerald);
-        }
-
-        .hero h1 {
-            font-size: 3.8rem;
-            font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 1.5rem;
-            letter-spacing: -1px;
-            max-width: 850px;
-        }
-
-        .hero h1 .highlight {
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-            max-width: 650px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.2rem;
-            justify-content: center;
-        }
-
-        .btn {
-            padding: 0.85rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-size: 0.95rem;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-blue));
-            color: #000;
-            font-weight: 700;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
-        }
-
-        .btn-secondary {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            color: var(--text-primary);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--accent-cyan);
-            color: var(--accent-cyan);
-        }
-
-        /* Headings */
-        .section-title {
-            margin-bottom: 2.5rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.25rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-        }
-
-        .section-title p {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            margin-top: 0.4rem;
-        }
-
-        /* Education Card */
-        .education-card {
+        /* Card Styles Preserved */
+        .card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 16px;
             padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
             transition: all 0.3s ease;
         }
 
-        .education-card:hover {
+        .card:hover {
             border-color: rgba(56, 189, 248, 0.4);
             box-shadow: 0 10px 25px var(--glow-color);
         }
 
-        .edu-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .edu-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .edu-duration {
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            color: var(--accent-cyan);
-            background: rgba(56, 189, 248, 0.1);
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
-
-        .edu-sub {
-            color: var(--text-secondary);
-            font-size: 1rem;
-        }
-
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(56, 189, 248, 0.4);
-            box-shadow: 0 15px 30px var(--glow-color);
-        }
-
-        .project-tag {
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            color: var(--accent-cyan);
-            background: rgba(56, 189, 248, 0.1);
-            padding: 0.25rem 0.75rem;
-            border-radius: 4px;
-            display: inline-block;
-            margin-bottom: 1rem;
-            width: fit-content;
-        }
-
-        .project-card h3 {
-            font-size: 1.35rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .project-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tech-badge {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            color: var(--text-primary);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-family: var(--font-mono);
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            transition: color 0.2s ease;
-        }
-
-        .project-links a:hover {
-            color: var(--accent-cyan);
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .skill-category {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 1.5rem;
-        }
-
-        .skill-category h4 {
-            color: var(--accent-cyan);
-            font-size: 1rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skill-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
-        }
-
-        .skill-item {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skill-item i {
-            font-size: 0.8rem;
-            color: var(--accent-blue);
-        }
-
-        /* Contact Section */
-        .contact-card {
-            background: linear-gradient(135deg, rgba(18, 22, 31, 0.9), rgba(15, 19, 26, 0.9));
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 3.5rem 2rem;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .contact-card h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-card p {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        .social-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--card-border);
-            color: var(--text-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-btn:hover {
-            background: var(--accent-cyan);
-            color: #000;
-            transform: translateY(-3px);
-        }
-
+        /* Footer */
         footer {
             text-align: center;
             padding: 2rem;
@@ -456,156 +149,36 @@
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.6rem; }
             .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Dynamic Canvas Particle Mesh Background -->
+    <!-- Dynamic Animated Particle Background -->
     <canvas id="particle-canvas"></canvas>
 
-    <!-- Header / Navbar -->
+    <!-- Header Navigation -->
     <header>
         <nav>
-            <a href="#" class="logo"><span>&lt;VP/&gt;</span> Venkatesh Padam</a>
+            <a href="#" class="logo"><span>&lt;/&gt;</span> Portfolio</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="about">
-        <div class="badge">
-            <span class="badge-dot"></span> Open for Engineering Opportunities
-        </div>
-        <h1>Computer Science Student & <span class="highlight">Software Engineer</span></h1>
-        <p>Passionate about building scalable web applications, robust backends, and responsive user interfaces.</p>
-        <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary"><i class="fas fa-code"></i> View Work</a>
-            <a href="https://github.com/VenkateshPadam" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub Profile</a>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <div class="section-title">
-            <h2>Education</h2>
-            <p>Academic qualifications and journey</p>
-        </div>
-        <div class="education-card">
-            <div class="edu-header">
-                <div>
-                    <div class="edu-title">Bachelor of Technology (B.Tech)</div>
-                    <div class="edu-sub">Computer Science & Engineering</div>
-                </div>
-                <span class="edu-duration"><i class="far fa-calendar-alt"></i> 2023 – 2027</span>
-            </div>
-            <p style="color: var(--text-secondary); margin-top: 1rem; font-size: 0.95rem;">
-                Studying core computer science fundamentals, data structures, algorithms, database management systems, and full-stack web development.
-            </p>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="section-title">
-            <h2>Featured Projects</h2>
-            <p>Software and full-stack web applications</p>
-        </div>
-
-        <div class="projects-grid">
-            <!-- Project: Python Flask Portfolio -->
-            <div class="project-card">
-                <div>
-                    <span class="project-tag">Full-Stack Web App</span>
-                    <h3>Python Flask Portfolio</h3>
-                    <p>A web portfolio application engineered using Python Flask backend routing, Jinja2 template engine, custom CSS styling, and dynamic project pages.</p>
-                    <div class="tech-stack">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Flask</span>
-                        <span class="tech-badge">Jinja2</span>
-                        <span class="tech-badge">HTML5/CSS3</span>
-                    </div>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/VenkateshPadam/portfolio" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Source Code</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="section-title">
-            <h2>Technical Skills</h2>
-            <p>Languages, frameworks, and tools</p>
-        </div>
-
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h4><i class="fas fa-code"></i> Languages</h4>
-                <ul class="skill-list">
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> Python</li>
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> JavaScript (ES6+)</li>
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> HTML5 & CSS3</li>
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> SQL</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h4><i class="fas fa-layer-group"></i> Frameworks & Web</h4>
-                <ul class="skill-list">
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> Flask Framework</li>
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> REST APIs</li>
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> Jinja2 Templating</li>
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> Responsive Design</li>
-                </ul>
-            </div>
-
-            <div class="skill-category">
-                <h4><i class="fas fa-tools"></i> Developer Tools</h4>
-                <ul class="skill-list">
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> Git & GitHub</li>
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> GitHub Pages</li>
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> VS Code</li>
-                    <li class="skill-item"><i class="fas fa-chevron-right"></i> Command Line</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="contact-card">
-            <h3>Get In Touch</h3>
-            <p>I am open to software development roles, internship opportunities, and technical projects.</p>
-            <div class="social-links">
-                <a href="https://github.com/VenkateshPadam" target="_blank" rel="noopener noreferrer" class="social-btn" title="GitHub Profile">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:padamvenkatesh@gmail.com" class="social-btn" title="Send Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" title="LinkedIn Profile">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
-        </div>
+    <!-- Content Area (Empty) -->
+    <section class="main-container" id="about">
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Venkatesh Padam. Built with HTML5, CSS3 & JavaScript.</p>
     </footer>
 
-    <!-- Canvas Particle Mesh Animation Script -->
+    <!-- Canvas Particle Mesh Background Script -->
     <script>
         const canvas = document.getElementById('particle-canvas');
         const ctx = canvas.getContext('2d');
